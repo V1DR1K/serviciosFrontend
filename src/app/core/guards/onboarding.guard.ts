@@ -1,0 +1,1 @@
+import{inject}from'@angular/core';import{CanActivateFn,Router}from'@angular/router';import{AuthService}from'../services/auth.service';export const onboardingGuard:CanActivateFn=()=>inject(AuthService).getCurrentUser()?.onboardingComplete?true:inject(Router).createUrlTree(['/onboarding']);
