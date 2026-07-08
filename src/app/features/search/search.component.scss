@@ -1,2 +1,219 @@
-.map-page{position:relative;height:calc(100dvh - 80px)}.map{position:absolute;inset:0}.search{position:absolute;z-index:2;left:30px;right:30px;top:25px;display:flex;align-items:center;background:white;border-radius:30px;padding:8px 12px;box-shadow:var(--shadow)}.search input{flex:1;border:0}.search button{border:0;background:var(--blue);color:white;padding:12px 20px;border-radius:24px}.chips{position:absolute;z-index:2;top:100px;left:30px;display:flex;gap:10px}.chips button{border:1px solid var(--line);background:white;padding:10px 14px;border-radius:24px}.locate{position:absolute;right:25px;bottom:25px;z-index:2;border:0;border-radius:50%;width:50px;height:50px;background:white}.sheet{position:absolute;z-index:3;right:25px;bottom:25px;width:410px;background:white;border-radius:18px;padding:28px;box-shadow:var(--shadow)}.close{position:absolute;right:14px;top:10px;border:0;background:none;font-size:28px}.applicant{display:flex;width:100%;align-items:center;gap:10px;margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:9px;background:white}.applicant span:nth-child(2){flex:1}.whatsapp{display:block;background:#21b85b;color:white;padding:14px;text-align:center;border-radius:9px}.backdrop{position:fixed;inset:0;background:#041b3c77;z-index:20;display:grid;place-items:center}.backdrop form{position:relative;width:min(560px,calc(100vw - 30px));background:white;padding:35px;border-radius:18px;display:grid;gap:16px}.backdrop textarea{min-height:100px}@media(max-width:800px){.map-page{height:calc(100dvh - 128px)}.search{left:12px;right:12px;top:12px}.search button{font-size:0;width:46px}.chips{left:12px;top:80px;max-width:calc(100% - 24px);overflow:auto}.sheet{left:8px;right:8px;bottom:8px;width:auto}}
-.chips{display:flex;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;touch-action:pan-x;scrollbar-width:none}.chips button{flex:0 0 auto;scroll-snap-align:start}.radar{position:absolute;inset:0;z-index:8;background:rgba(3,25,61,.42);display:grid;place-content:center;justify-items:center;color:white;gap:26px}.pulse{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:#075ccc;box-shadow:0 0 0 0 rgba(40,139,255,.65);animation:radar 1.3s infinite}.pulse span{font-size:44px}.radar.success .pulse{background:#087443;animation:none}.radar b{background:#10254b;padding:12px 18px;border-radius:999px}@keyframes radar{70%{box-shadow:0 0 0 70px rgba(40,139,255,0)}100%{box-shadow:0 0 0 0 rgba(40,139,255,0)}}@media(prefers-reduced-motion:reduce){.pulse{animation:none}}
+.map-page {
+  position: relative;
+  height: calc(100dvh - 80px);
+}
+.map {
+  position: absolute;
+  inset: 0;
+}
+.search {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  right: 30px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+  padding: 8px 12px;
+  box-shadow: var(--shadow);
+}
+.search input {
+  flex: 1;
+  border: 0;
+}
+.search button {
+  border: 0;
+  background: var(--blue);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+.new-request > span:first-child {
+  font-size: 20px;
+  line-height: 1;
+}
+.chips {
+  position: absolute;
+  z-index: 2;
+  top: 100px;
+  left: 30px;
+  display: flex;
+  gap: 10px;
+}
+.chips button {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 10px 14px;
+  border-radius: 24px;
+}
+.locate {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  z-index: 2;
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+}
+.sheet {
+  position: absolute;
+  z-index: 3;
+  right: 25px;
+  bottom: 25px;
+  width: 410px;
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+}
+.applicant {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: white;
+}
+.applicant span:nth-child(2) {
+  flex: 1;
+}
+.whatsapp {
+  display: block;
+  background: #21b85b;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  border-radius: 9px;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: #041b3c77;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+}
+.backdrop form {
+  position: relative;
+  width: min(560px, calc(100vw - 30px));
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  display: grid;
+  gap: 16px;
+}
+.backdrop textarea {
+  min-height: 100px;
+}
+@media (max-width: 800px) {
+  .map-page {
+    height: calc(100dvh - 128px);
+  }
+  .search {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+  }
+  .search .new-request {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    flex: 0 0 42px;
+    justify-content: center;
+  }
+  .new-request-label {
+    display: none;
+  }
+  .new-request > span:first-child {
+    font-size: 28px;
+  }
+  .chips {
+    left: 12px;
+    top: 80px;
+    max-width: calc(100% - 24px);
+    overflow: auto;
+  }
+  .sheet {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    width: auto;
+  }
+}
+.chips {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: x proximity;
+  touch-action: pan-x;
+  scrollbar-width: none;
+}
+.chips button {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+.radar {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  background: rgba(3, 25, 61, 0.42);
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  color: white;
+  gap: 26px;
+}
+.pulse {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #075ccc;
+  box-shadow: 0 0 0 0 rgba(40, 139, 255, 0.65);
+  animation: radar 1.3s infinite;
+}
+.pulse span {
+  font-size: 44px;
+}
+.radar.success .pulse {
+  background: #087443;
+  animation: none;
+}
+.radar b {
+  background: #10254b;
+  padding: 12px 18px;
+  border-radius: 999px;
+}
+@keyframes radar {
+  70% {
+    box-shadow: 0 0 0 70px rgba(40, 139, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 139, 255, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}

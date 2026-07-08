@@ -1,2 +1,229 @@
-.dashboard{display:grid;grid-template-columns:2fr 1fr;gap:20px}.welcome{padding:30px;display:flex;justify-content:space-between}.stats{display:flex;gap:12px}.stats b{background:#e5edff;padding:15px 22px;border-radius:12px;text-align:center;color:var(--primary)}.stats small{display:block;font-size:10px}.next{background:var(--primary);color:white;padding:25px;border-radius:16px}.next a{display:block;background:white;color:var(--primary);padding:12px;text-align:center;border-radius:8px}.dashboard>h2,.jobs,.history{grid-column:1/3}.jobs{display:grid;grid-template-columns:1fr 1fr;gap:18px}.jobs article{padding:22px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start}.icon{font-size:38px;color:var(--primary)}.jobs em{display:block;color:#637087;font-size:12px;margin-top:8px}.status{padding:7px 10px;border-radius:999px;font-size:12px;background:#e7efff;color:#075ccc}.status-has_applicants,.status-pending_confirmation{background:#fff3cd;color:#8a5a00}.status-assigned,.status-in_progress,.status-completed{background:#dff6e8;color:#087443}.status-cancelled{background:#fde3e3;color:#a52222}.finish{grid-column:2/4;justify-self:end;background:#075ccc;color:white;border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}.finish:disabled{opacity:.55}.history{padding:20px}.history>div{display:grid;grid-template-columns:2fr 2fr 1fr;padding:15px;border-bottom:1px solid var(--line)}.empty{padding:35px;text-align:center}@media(max-width:800px){.dashboard{display:block}.dashboard>*{margin-bottom:16px}.next{display:none}.jobs{display:block}.jobs article{margin-bottom:12px;grid-template-columns:auto 1fr}.status{grid-column:2}.finish{grid-column:2}.welcome{display:block}.stats{margin-top:15px}.history>div{grid-template-columns:1fr}}
-.rate-link{border:0;background:transparent;color:#075ccc;font-weight:800}.rating{margin-top:20px}.stars{display:flex;justify-content:center;gap:5px}.stars button{border:0;background:transparent;color:#c3c6d6;font-size:38px;padding:2px;transition:transform .15s,color .15s}.stars button:hover{transform:scale(1.12)}.stars button.active{color:#ffb000}.rating>span{display:block;text-align:center;color:#637087;margin:6px 0 18px}.rating label{text-align:left}.rating label small{text-align:right;color:#637087}.rating textarea{resize:vertical;text-transform:none}.history>div{align-items:center}
+.dashboard {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.welcome {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.stats {
+  display: flex;
+  gap: 12px;
+}
+.stats b {
+  background: #e5edff;
+  padding: 15px 22px;
+  border-radius: 12px;
+  text-align: center;
+  color: var(--primary);
+}
+.stats small {
+  display: block;
+  font-size: 10px;
+}
+.next {
+  background: var(--primary);
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+}
+.next a {
+  display: block;
+  background: white;
+  color: var(--primary);
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+}
+.dashboard > h2,
+.jobs,
+.history {
+  grid-column: 1/3;
+}
+.jobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.jobs article {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: start;
+}
+.icon {
+  font-size: 38px;
+  color: var(--primary);
+}
+.jobs em {
+  display: block;
+  color: #637087;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.status {
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #e7efff;
+  color: #075ccc;
+}
+.status-has_applicants,
+.status-pending_confirmation {
+  background: #fff3cd;
+  color: #8a5a00;
+}
+.status-assigned,
+.status-in_progress,
+.status-completed {
+  background: #dff6e8;
+  color: #087443;
+}
+.status-cancelled {
+  background: #fde3e3;
+  color: #a52222;
+}
+.finish {
+  grid-column: 2/4;
+  justify-self: end;
+  background: #075ccc;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.finish:disabled {
+  opacity: 0.55;
+}
+.history {
+  padding: 8px 20px;
+}
+.history > div {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(90px, 1fr) minmax(
+      90px,
+      auto
+    );
+  gap: 24px;
+  padding: 18px 15px;
+  border-bottom: 1px solid var(--line);
+}
+.history > div:last-child {
+  border-bottom: 0;
+}
+.history > div > span:nth-of-type(2) {
+  letter-spacing: 1px;
+}
+.history .rate-link {
+  justify-self: end;
+}
+.empty {
+  padding: 35px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .dashboard {
+    display: block;
+  }
+  .dashboard > * {
+    margin-bottom: 16px;
+  }
+  .next {
+    display: none;
+  }
+  .jobs {
+    display: block;
+  }
+  .jobs article {
+    margin-bottom: 12px;
+    grid-template-columns: auto 1fr;
+  }
+  .status {
+    grid-column: 2;
+  }
+  .finish {
+    grid-column: 2;
+  }
+  .welcome {
+    display: block;
+  }
+  .stats {
+    margin-top: 15px;
+  }
+  .history > div {
+    grid-template-columns: 1fr auto;
+    gap: 3px 12px;
+    padding: 16px 0;
+  }
+  .history {
+    padding: 4px 18px;
+  }
+  .history > div > b,
+  .history > div > span:first-of-type {
+    grid-column: 1 / 3;
+  }
+  .history > div > span:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .history .rate-link {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+  }
+}
+.rate-link {
+  border: 0;
+  background: transparent;
+  color: #075ccc;
+  font-weight: 800;
+}
+.rating {
+  margin-top: 20px;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.stars button {
+  border: 0;
+  background: transparent;
+  color: #c3c6d6;
+  font-size: 38px;
+  padding: 2px;
+  transition:
+    transform 0.15s,
+    color 0.15s;
+}
+.stars button:hover {
+  transform: scale(1.12);
+}
+.stars button.active {
+  color: #ffb000;
+}
+.rating > span {
+  display: block;
+  text-align: center;
+  color: #637087;
+  margin: 6px 0 18px;
+}
+.rating label {
+  text-align: left;
+}
+.rating label small {
+  text-align: right;
+  color: #637087;
+}
+.rating textarea {
+  resize: vertical;
+  text-transform: none;
+}
+.history > div {
+  align-items: center;
+}
