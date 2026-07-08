@@ -1,0 +1,1 @@
+import{Component,inject}from'@angular/core';import{ActivatedRoute,RouterLink}from'@angular/router';@Component({selector:'app-legal',imports:[RouterLink],templateUrl:'./legal.component.html',styleUrl:'./legal.component.scss'})export class LegalComponent{private route=inject(ActivatedRoute);protected type=this.route.snapshot.data['type']as string;}
