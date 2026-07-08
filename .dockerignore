@@ -1,4 +1,6 @@
-node_modules
-dist
 .git
+.github
 .angular
+.idea
+dist
+node_modules
