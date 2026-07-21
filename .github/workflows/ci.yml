@@ -43,4 +43,4 @@ jobs:
       - name: Deploy frontend
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
-        run: ssh deploy@"$VPS_HOST" '/opt/apps/projects/serviciosBackend/infra/scripts/deploy.sh frontend'
+        run: ssh deploy@"$VPS_HOST" "git -C /opt/apps/projects/serviciosFrontend fetch origin main && git -C /opt/apps/projects/serviciosFrontend reset --hard '${{ github.sha }}' && /opt/infra/bin/deploy-service servicerca web"
